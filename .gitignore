@@ -1,0 +1,52 @@
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Icon?
+
+# ---- Windows ----
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---- Editors / tooling ----
+.history/
+.vscode/
+*.swp
+*.swo
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+
+# ---- KiCAD: user-local project settings (GUI state, not design) ----
+*.kicad_prl
+
+# ---- KiCAD: auto-backups and autosaves ----
+*-backups/
+_autosave-*
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.bak
+*.000
+
+# ---- KiCAD: caches and lock files ----
+fp-info-cache
+*.lck
+.#*
+
+# ---- KiCAD: legacy / rescue artifacts ----
+*-cache.lib
+*-rescue.lib
+*-rescue.dcm
+
+# ---- KiCAD: simulation and netlist outputs ----
+*.net

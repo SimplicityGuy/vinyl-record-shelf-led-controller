@@ -1,0 +1,15 @@
+Reference,Quantity,Value,Footprint,Part Number,Manufacturer,DigiKey PN,Description,Unit Price USD,Notes
+U1,1,XIAO ESP32C6,Seeed Studio XIAO Series Library:XIAO-ESP32-C6-DIP,XIAO-ESP32-C6,Seeed Studio,,WiFi6+BLE5 module on 2×7 pin DIP socket,6.20,Flash WLED before installing
+U2,1,SN74AHCT125N,Package_DIP:DIP-14_W7.62mm,SN74AHCT125N,Texas Instruments,296-4655-5-ND,Quad buffer 3-state 3.3V→5V level shifter DIP-14,0.80,Install after power test
+,1,ED14DT,Package_DIP:DIP-14_W7.62mm,ED14DT,On Shore Technology,ED3045-5-ND,DIP-14 tin socket for SN74AHCT125N,0.17,Solder socket first not IC
+C1,1,100µF 16V,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,UKL1C101KPDANA,Nichicon,493-13396-ND,Aluminium electrolytic 100µF 10% 16V radial φ8mm P3.5mm,0.58,POLARISED — long lead (+) to square pad
+C2,1,100nF 50V,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P5.00mm,K104K15X7RF53H5G,Vishay Beyschlag,56-K104K15X7RF53H5G-ND,100nF X7R 10% 50V radial ceramic disc H5 style P5.0mm,0.48,Not polarised
+C3,1,100nF 50V,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P5.00mm,K104K15X7RF53H5G,Vishay Beyschlag,56-K104K15X7RF53H5G-ND,100nF X7R 10% 50V radial ceramic disc H5 style P5.0mm,0.48,Not polarised
+C4,1,100nF 50V,Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P5.00mm,K104K15X7RF53H5G,Vishay Beyschlag,56-K104K15X7RF53H5G-ND,100nF X7R 10% 50V radial ceramic disc H5 style P5.0mm,0.48,Not polarised
+R1,1,470Ω,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm,LR1F470R,TE Connectivity,A105960CT-ND,470Ω 1% 0.6W metal film axial P7.62mm,0.03,Data line series resistor
+J1,1,PJ-102AH,Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal,PJ-102AH,Same Sky (CUI),CP-102AH-ND,DC barrel jack 2.1mm centre-positive right-angle THT,0.71,CENTRE POSITIVE — verify before power-up
+J2,1,0397000803,TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal,0397000803,Molex,WM22185-ND,3-position Eurostyle push-in terminal block 5.00mm pitch,2.23,+5V / GND / DATA to LED strip
+MH1,1,M3,MountingHole:MountingHole_3.2mm_M3,,,,,M3 × 6mm screw + 10mm brass standoff,0.10,Corner mounting
+MH2,1,M3,MountingHole:MountingHole_3.2mm_M3,,,,,M3 × 6mm screw + 10mm brass standoff,0.10,Corner mounting
+MH3,1,M3,MountingHole:MountingHole_3.2mm_M3,,,,,M3 × 6mm screw + 10mm brass standoff,0.10,Corner mounting
+MH4,1,M3,MountingHole:MountingHole_3.2mm_M3,,,,,M3 × 6mm screw + 10mm brass standoff,0.10,Corner mounting
