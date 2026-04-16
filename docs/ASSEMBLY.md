@@ -1,7 +1,7 @@
 # Assembly Instructions
 
 WS2812B LED Controller — Vinyl Record Shelf Finder  
-PCB rev 10 · 68 × 50 mm · All through-hole
+PCB rev 1 · 68 × 50 mm · All through-hole
 
 ---
 
@@ -33,20 +33,20 @@ Solder in order of component height, shortest first.
 ### Step 2 — R1: 470Ω Axial Resistor (LR1F470R)
 
 1. Bend leads to 7.62mm pitch.
-2. Insert into R1 — not polarised, either orientation.
+2. Insert into R1 — not polarized, either orientation.
 3. Tape or bend leads to hold flat, solder from the bottom, clip leads.
 
 ### Step 3 — C2, C3, C4: 100nF Ceramic Disc (K104K15X7RF53H5G)
 
 These use H5-style flat-crimp leads at exactly **5.0mm pitch** — do not bend them.
 
-1. Insert each cap — not polarised.
+1. Insert each cap — not polarized.
 2. Solder from the bottom, clip.
 3. Verify C4 (between J1 and the XIAO area) has visible clearance from J1 before soldering.
 
 ### Step 4 — C1: 100µF Electrolytic (UKL1C101KPDANA)
 
-> ⚠️ **Polarised.** Installing backwards will cause failure on power-up.
+> ⚠️ **Polarized.** Installing backwards will cause failure on power-up.
 
 1. The **longer lead is positive (+)**.
 2. The **white stripe on the sleeve marks the negative side**.
@@ -70,7 +70,7 @@ These use H5-style flat-crimp leads at exactly **5.0mm pitch** — do not bend t
 ### Step 7 — J2: Terminal Block (Molex 0397000803)
 
 1. Insert J2 so the push-button wire openings face **up and outward** beyond the top board edge.
-2. Pin 1 (square pad) is on the **left** — labelled `+5V` on silkscreen.
+2. Pin 1 (square pad) is on the **left** — labeled `+5V` on silkscreen.
 3. Pin order left to right: `+5V` · `GND` · `DAT`.
 4. Solder all three pins.
 
@@ -97,7 +97,7 @@ The XIAO ESP32C6 module plugs into two 1×7 female socket headers. The module is
 
 ### Step 11 — First Power-Up
 
-> ⚠️ Verify the supply is **centre-positive** before plugging into J1.
+> ⚠️ Verify the supply is **center-positive** before plugging into J1.
 
 1. Plug in the 5V supply.
 2. Measure `+5V` vs `GND` at J2 → should read 4.9–5.1V.
@@ -127,26 +127,6 @@ Row 3:          9  10  11  12
 Row 4 (bottom):13  14  15  16
 ```
 
-```mermaid
-flowchart TB
-    subgraph Row1 [Row 1 top]
-        direction LR
-        C1[1] ~~~ C2[2] ~~~ C3[3] ~~~ C4[4]
-    end
-    subgraph Row2 [Row 2]
-        direction LR
-        C5[5] ~~~ C6[6] ~~~ C7[7] ~~~ C8[8]
-    end
-    subgraph Row3 [Row 3]
-        direction LR
-        C9[9] ~~~ C10[10] ~~~ C11[11] ~~~ C12[12]
-    end
-    subgraph Row4 [Row 4 bottom]
-        direction LR
-        C13[13] ~~~ C14[14] ~~~ C15[15] ~~~ C16[16]
-    end
-```
-
 Pre-tin the three solder pads on each cut end.
 
 ### Step 14 — Mount Strips in Cubes
@@ -170,20 +150,6 @@ J2 DATA → Strip 1 Din
                            Strip 2 Dout → ... → Strip 16 Din
 ```
 
-```mermaid
-flowchart LR
-    J2[J2 DATA pin]
-    S1[Strip 1]
-    S2[Strip 2]
-    S3[Strip 3]
-    S16[Strip 16]
-
-    J2 --> S1
-    S1 -->|Dout → Din| S2
-    S2 -->|Dout → Din| S3
-    S3 -.->|Dout → Din ···| S16
-```
-
 The arrow on the WS2812B strip indicates the data direction — always `Dout → Din`.
 
 > ⚠️ Follow the cube numbering order (1→16) precisely. WLED segment mapping relies on physical chain order.
@@ -200,7 +166,7 @@ Insulate all exposed solder joints with heat-shrink tubing.
 ### Step 18 — Final Connections
 
 1. **J2** — Insert the three bus wires. Press the orange push-button above each terminal to open, insert stripped wire (9–10mm), release. Pull gently to confirm grip.
-2. **J1** — Plug in the 5V supply barrel. Confirm centre-positive.
+2. **J1** — Plug in the 5V supply barrel. Confirm center-positive.
 3. **Raspberry Pi** — joins over Wi-Fi; no physical PCB connection needed.
 
 ### Step 19 — System Test
@@ -209,7 +175,7 @@ Insulate all exposed solder joints with heat-shrink tubing.
 2. In WLED, set LED count to total LEDs across all strips. Set solid white — verify all 16 cubes light.
 3. Create 16 equal segments. Activate each in turn and confirm correct cube illuminates (cube 1 = top-left, cube 16 = bottom-right).
 4. Measure supply current at full white brightness. Confirm it is within your PSU rating.
-5. Update the `cube_locations` table in the discogsography database with each record's cube assignment.
+5. Record each record's cube assignment in [vinyl-record-shelf-gopher](https://github.com/SimplicityGuy/vinyl-record-shelf-gopher). Schema: TBD.
 
 ---
 
@@ -220,7 +186,7 @@ Insulate all exposed solder joints with heat-shrink tubing.
 | Pin | Signal |
 |---|---|
 | 1 — sleeve (square pad) | GND |
-| 2 — tip | +5V (centre positive) |
+| 2 — tip | +5V (center positive) |
 | 3 — switch (side) | GND (tied on PCB) |
 
 **J2 — LED Strip Out (Molex 0397000803)**
